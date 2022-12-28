@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Cây Cảnh</title>
+
+    <link rel="stylesheet" href="icon/fontawesome-free-6.2.1-web (1)/fontawesome-free-6.2.1-web/css/all.css">
+    <script src="js1.js"></script>
+    <link rel="stylesheet" href="csssp.css">
+
+</head>
+<body>
+<div class="app">
+    <header class="header">
+        <div class="textrun">
+            <marquee>Nhà vườn Thủy Tuấn xin kính chào quý khách .Cảm ơn quý khách đã ủng hộ,mọi đóng góp về chất lượng
+                sản phẩm và dịch vụ
+                xin vui lòng liên hệ Hotline-0968686868
+            </marquee>
+        </div>
+        <!--        phần đầu trang -->
+        <div class="grid">
+            <nav class="nav">
+                <ul class="list">
+                    <li class="item">Vào cửa hàng trên ứng dụng
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="item">Kết nối
+                        <a href="https://www.facebook.com/thuytuan.caygiong">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="item">
+                        <i class="fa-regular fa-bell"></i>
+                        Thông báo
+                    </li>
+                    <li class="item">
+                        <i class="fa-solid fa-question"></i>
+                        Trợ giúp
+                    </li>
+                    <li class="item item_strong">Đăng kí</li>
+                    <li class="item item_strong">Đăng nhập</li>
+                </ul>
+            </nav>
+
+            <!--khung tìm kiếm -->
+            <div class="search">
+                <div class="logo">
+                    <img src="image/logo-the-gioi-cay-va-hoa-ha-noi.png" height="60" width="150"/>
+                </div>
+                <div class="search1">
+                    <input type="text" class="search1-input" placeholder="Tìm trong shop này">
+                    <div class="search-select">
+
+                    </div>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="cart-index">3</span>
+                    <div class="cart-list--nocart">
+
+                        <img class="img-nocart" src="image/gio-hang-trong.jpg" height="225" width="225"/>
+                        <span class="notextcart">
+                  không có sản phẩm nào
+              </span>
+                    </div>
+
+                </div>
+            </div>
+            <!--            -->
+        </div>
+    </header>
+    <!--    tạo phần thân-->
+    <div class="app-container">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2">
+                    <nav class="category">
+                        <h3 class="category__heading">
+                            <i class="category__heading-icon fas fa-list"></i>
+                            Danh mục
+                        </h3>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="" class="category-item__link">Cây bonsai</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item__link">Cây cổ thụ</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item__link">Cây ăn quả</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="grid__column-10">
+                    <div class="home-filter">
+                        <span class="home-filter__label"> Sắp xếp theo</span>
+                        <button class="btn2">Phổ biến</button>
+                        <button class="btn2">Mới nhất</button>
+                        <button class="btn2">Bán chạy</button>
+
+                        <div class="select-input">
+                            <span class="select-input__label"> Giá</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                            <!--                            list option-->
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link"> Giá thấp hơn 1tr</a><br>
+                                    <a href="" class="select-input__link">Giá cao hơn 1tr</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--                     sản phẩm-->
+                    <div class="home-product">
+                        <div class="btn-inputsp">
+                            <input type="text" id="productName">
+                            <input type="text" id="price">
+                            <input type="text" id="number">
+                            <input type="text" id="img">
+                        </div>
+                        <button onclick="createNewProduct()">Thêm sản phẩm</button>
+                        <br>
+                        <span id="numberOfProduct"></span>
+                        <table border="1px">
+                            <tr>
+                                <td> Loại sản phẩm</td>
+                                <td> Gía sản phẩm</td>
+                                <td> Số lượng</td>
+                                <td> Link ảnh</td>
+                                <td> Hình ảnh </td>
+
+                                <td> Xóa </td>
+                            </tr>
+
+                            <tbody id="listProduct"></tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"></footer>
+</div>
+<!--//form đăng nhập-->
+<div class="modal">
+
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+        <div class="fom">
+            <div class="logincontainer">
+                <div class="login">
+                    <h2 class="logintex"> Đăng Nhập </h2>
+                    <button class="btn1">Đăng Kí</button>
+                </div>
+                <div class="ip">
+                    <input type="text" class="ip1" placeholder="Nhập số điện thoại/Email">
+                    <input type="password" class="ip2" placeholder=" Mật khẩu">
+                </div>
+                <div class="policy">
+                    <a href="">Điều khoản dịch vụ & chính sách bảo mật</a>
+                </div>
+                <div class="btnlogin">
+                    <button class="btnlogin1">Đăng Nhập</button>
+                    <button class="btnback">Trở lại</button>
+                </div>
+            </div>
+            <div class="connect">
+                <a href="https://www.facebook.com/r.php" class="connectext"> kết nối với facebook
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--hết form-->
+</body>
+</html>
