@@ -75,7 +75,7 @@ function addItemToCart(title, price, img) {
 
     let cartRowContents = `
   <div class="cart-item cart-column">
-      <img class="cart-item-image" src="${img}" width="200" height="500">
+      <img class="cart-item-image" src="${img}" width="200" height="200">
       <span class="cart-item-title">${title}</span>
   </div>
   <span class="cart-price cart-column">${price}</span>
@@ -91,7 +91,7 @@ function addItemToCart(title, price, img) {
         updatecart()
     })
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
-        var input = event.target
+        let input = event.target
         if (isNaN(input.value) || input.value <= 0) {
             input.value = 1;
         }
